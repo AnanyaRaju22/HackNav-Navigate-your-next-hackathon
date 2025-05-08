@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+  }
+  
+  .top-bar {
+    background-color: #6A0DAD;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .account-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .hackathon-section, .comments-section {
+    background-color: #e0e4ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .section-image {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .view-all-button, .more-details-button {
+    background-color: #6A0DAD;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .more-details-button {
+    background-color: #0A8A00;
+  }
+  
+  .quotes-section {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    font-style: italic;
+  }
+  
+  .quote {
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #6A0DAD;
+  }
+  
+  .search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #fff;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  .add-button {
+    display: flex;
+    align-items: center;
+    background-color: #0A8A00;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .add-button span {
+    margin-left: 5px;
+  }
+  
+  .filter-icon {
+    display: flex;
+    text-align: left;
+    padding: 10px;
+  }  

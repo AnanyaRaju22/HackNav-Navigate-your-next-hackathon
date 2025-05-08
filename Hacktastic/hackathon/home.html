@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+    /* Top Bar */
+    .top-bar {
+      background-color: #6A0DAD;
+      color: white;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .account-icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+    /* Main Container */
+    .container {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    /* Left and Right Sections - Image with Centered Button */
+    .hackathon-section, .comments-section {
+      background-color: #e0e4ff;
+      padding: 20px;
+      border-radius: 10px;
+      width: 45%;
+      text-align: center;
+    }
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .section-image {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .view-all-button, .more-details-button {
+      background-color: #6A0DAD;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    .more-details-button {
+      background-color: #0A8A00;
+    }
+    /* Lower Section - Quotes */
+    .quotes-section {
+      background-color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin: 20px;
+      border-radius: 10px;
+      font-style: italic;
+    }
+    .quote {
+      margin: 10px 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar with Account Icon -->
+  <div class="top-bar">
+    <div>Hackathon Portal</div>
+    <div class="account-icon">👤</div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Left Section: Image with Centered Button -->
+    <div class="hackathon-section">
+      <div class="section-title">Upcoming Hackathons</div>
+      <img src="img1.jpg" alt="Hackathon" class="section-image">
+      <center><a href="upcom.html" class="view-all-button">View All Hackathons</a></center>
+    </div>
+
+    <!-- Right Section: Image with Centered Button -->
+    <div class="comments-section">
+      <div class="section-title">Participant Stories</div>
+      <img src="img1.jpg" alt="Participant Feedback" class="section-image">
+      <center><a href="#" class="more-details-button">More Reviews & Ideas</a></center>
+    </div>
+  </div>
+
+  <!-- Lower Section: Quotes or Lines about Hackathons -->
+  <div class="quotes-section">
+    <div class="quote">"Hackathons are where ideas come alive."</div>
+    <div class="quote">"Collaboration and innovation at its finest."</div>
+    <div class="quote">"Empowering the next generation of problem solvers."</div>
+  </div>
+
+</body>
+</html>

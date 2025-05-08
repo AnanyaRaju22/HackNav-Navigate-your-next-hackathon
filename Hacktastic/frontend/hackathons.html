@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon Listing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header with Search Bar and Add Button -->
+  <div class="header">
+    <div class="search-bar">
+      <input type="text" placeholder="Search hackathons...">
+    </div>
+    <div class="add-button">
+      <span>+</span><span>Add</span>
+    </div>
+  </div>
+
+  <!-- Filter Icon (Funnel) -->
+  <div class="filter-icon">🌪</div> <!-- Funnel icon -->
+
+  <!-- Hackathon List -->
+  <div class="hackathon-list">
+    <!-- Hackathon Box -->
+    <div class="hackathon-box">
+      <div class="hackathon-image"></div>
+      <div class="hackathon-info">
+        <p class="hackathon-name">Hackathon Name</p>
+        <p class="hackathon-location">Location: Delhi</p>
+        <p class="hackathon-date">Date: 10th December 2024</p>
+      </div>
+    </div>
+    <!-- Repeat for more hackathons -->
+    <div class="hackathon-box">
+      <div class="hackathon-image"></div>
+      <div class="hackathon-info">
+        <p class="hackathon-name">Tech Challenge 2024</p>
+        <p class="hackathon-location">Location: Bangalore</p>
+        <p class="hackathon-date">Date: 15th January 2025</p>
+      </div>
+    </div>
+    <div class="hackathon-box">
+      <div class="hackathon-image"></div>
+      <div class="hackathon-info">
+        <p class="hackathon-name">Innovation Sprint</p>
+        <p class="hackathon-location">Location: Mumbai</p>
+        <p class="hackathon-date">Date: 20th February 2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>Next</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

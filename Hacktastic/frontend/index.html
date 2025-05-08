@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Bar with Account Icon -->
+  <div class="top-bar">
+    <div>Hackathon Portal</div>
+    <div class="account-icon" onclick="openLoginPopup()">👤</div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Left Section: Image with Centered Button -->
+    <div class="hackathon-section">
+      <div class="section-title">Upcoming Hackathons</div>
+      <img src="img1.jpg" alt="Hackathon" class="section-image">
+      <center><a href="hackathons.html" class="view-all-button">View All Hackathons</a></center>
+    </div>
+
+    <!-- Right Section: Image with Centered Button -->
+    <div class="comments-section">
+      <div class="section-title">Participant Stories</div>
+      <img src="img1.jpg" alt="Participant Feedback" class="section-image">
+      <center><a href="#" class="more-details-button">More Reviews & Ideas</a></center>
+    </div>
+  </div>
+
+  <!-- Lower Section: Quotes or Lines about Hackathons -->
+  <div class="quotes-section">
+    <div class="quote">"Hackathons are where ideas come alive."</div>
+    <div class="quote">"Collaboration and innovation at its finest."</div>
+    <div class="quote">"Empowering the next generation of problem solvers."</div>
+  </div>
+
+  <!-- Login Popup -->
+  <div id="loginPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeLoginPopup()">&times;</span>
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

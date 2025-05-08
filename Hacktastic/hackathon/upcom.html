@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon Listing</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+    }
+    /* Header Section */
+    .header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      background-color: #6A0DAD;
+    }
+    .search-bar {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      margin-right: 10px;
+      background-color: #fff;
+    }
+    .search-bar input {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 5px;
+      font-size: 16px;
+    }
+    .add-button {
+      display: flex;
+      align-items: center;
+      background-color: #0A8A00;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .add-button span {
+      margin-left: 5px;
+    }
+    /* Filter Icon */
+    .filter-icon {
+      display: flex;
+      text-align: left; 
+      padding: 10px;
+      font-size: 24px;
+      color: #6A0DAD;
+      cursor: pointer;
+    }
+    /* Hackathon Information Boxes */
+    .hackathon-list {
+      padding: 10px;
+    }
+    .hackathon-box {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: black; /* Link color */
+    }
+    .hackathon-image {
+      width: 150px;
+      height: 150px;
+      background-color: #dcdcdc;
+      border-radius: 5px;
+      margin-right: 15px;
+    }
+    .hackathon-info {
+      flex: 1;
+    }
+    .hackathon-name {
+      font-weight: bold;
+      font-size: 25px;
+      margin: 0;
+    }
+    .hackathon-location,
+    .hackathon-date {
+      font-size: 20px;
+      color: #555;
+    }
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+    }
+    .pagination button {
+      background-color: #6A0DAD;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Search Bar and Add Button -->
+  <div class="header">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search hackathons..." onkeyup="filterHackathons()">
+    </div>
+    <!-- Add Button as a Link that redirects to a different page -->
+    <a href="add.html" class="add-button">
+      <span>+</span><span>Add</span>
+    </a>
+  </div>
+
+  <!-- Filter Icon (Funnel) -->
+  <div class="filter-icon">🌪️</div> <!-- Funnel icon -->
+
+  <!-- Hackathon List -->
+  <div class="hackathon-list" id="hackathonList">
+    <!-- Hackathon Box -->
+    <a href="hackathon1.html" class="hackathon-box">
+      <div class="hackathon-image"></div>
+      <div class="hackathon-info">
+        <p class="hackathon-name">Hackathon Name</p>
+        <p class="hackathon-location">Location: Delhi</p>
+        <p class="hackathon-date">Date: 10th December 2024</p>
+      </div>
+    </a>
+
+    <!-- Hackathon Box -->
+    <a href="hackathon-detail.html?name=TechChallenge2024&location=Bangalore&date=2025-01-15" class="hackathon-box">
+      <div class="hackathon-image"></div>
+      <div class="hackathon-info">
+        <p class="hackathon-name">Tech Challenge 2024</p>
+        <p class="hackathon-location">Location: Bangalore</p>
+        <p class="hackathon-date">Date: 15th January 2025</p>
+      </div>
+    </a>
+
+    <!-- Hackathon Box -->
+    <a href="hackathon-detail.html?name=InnovationSprint&location=Mumbai&date=2025-02-20" class="hackathon-box">
+      <div class="hackathon-image"></div>
+      <div class="hackathon-info">
+        <p class="hackathon-name">Innovation Sprint</p>
+        <p class="hackathon-location">Location: Mumbai</p>
+        <p class="hackathon-date">Date: 20th February 2025</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>Next</button>
+  </div>
+
+  <script>
+    // Function to filter hackathons based on search input
+    function filterHackathons() {
+      const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+      const hackathonList = document.getElementById('hackathonList');
+      const hackathonBoxes = hackathonList.getElementsByClassName('hackathon-box');
+
+      // Loop through all hackathon boxes and hide those that don't match the search query
+      Array.from(hackathonBoxes).forEach((box) => {
+        const name = box.querySelector('.hackathon-name').textContent.toLowerCase();
+        const location = box.querySelector('.hackathon-location').textContent.toLowerCase();
+        const date = box.querySelector('.hackathon-date').textContent.toLowerCase();
+
+        // Check if the name, location, or date contains the search query
+        if (name.includes(searchQuery) || location.includes(searchQuery) || date.includes(searchQuery)) {
+          box.style.display = 'flex'; // Show the hackathon box
+        } else {
+          box.style.display = 'none'; // Hide the hackathon box
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Hackathon</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Add Hackathon</h2>
+    <form id="addHackathonForm">
+      <div class="form-group">
+        <label for="hackathonName">Hackathon Name:</label>
+        <input type="text" id="hackathonName" name="hackathonName" required>
+      </div>
+      <div class="form-group">
+        <label for="hackathonLocation">Location:</label>
+        <input type="text" id="hackathonLocation" name="hackathonLocation" required>
+      </div>
+      <div class="form-group">
+        <label for="hackathonDate">Date:</label>
+        <input type="date" id="hackathonDate" name="hackathonDate" required>
+      </div>
+      <div class="form-group">
+        <label for="hackathonDescription">Description:</label>
+        <textarea id="hackathonDescription" name="hackathonDescription" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="hackathonImage">Image URL:</label>
+        <input type="url" id="hackathonImage" name="hackathonImage" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Add Hackathon</button>
+      </div>
+    </form>
+  </div>
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

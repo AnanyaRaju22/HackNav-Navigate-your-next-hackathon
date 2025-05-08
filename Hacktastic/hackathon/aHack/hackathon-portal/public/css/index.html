@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon Portal</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="search-bar">
+      <input type="text" placeholder="Search Hackathons" id="searchInput">
+    </div>
+    <a href="/add_hackathon.html" class="add-button"><span>+</span> Add Hackathon</a>
+  </div>
+
+  <div class="container">
+    <div id="hackathonList"></div>
+    <div class="pagination">
+      <button id="prevPage" disabled>Previous</button>
+      <button id="nextPage">Next</button>
+    </div>
+  </div>
+  <script src="/js/scripts.js"></script>
+</body>
+</html>
